@@ -1,0 +1,12 @@
+{
+	"ignores": [
+		"@commitlint/cli",
+		"commitizen",
+		"lint-staged",
+		"cz-vinyl",
+		"ts-loader",
+		"webpack-cli",
+		"rimraf",
+		"ts-node"
+	]
+}
