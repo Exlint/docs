@@ -6,127 +6,119 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+	title: 'Exlint docs',
+	tagline: 'Dinosaurs are cool',
+	url: 'https://your-docusaurus-test-site.com',
+	baseUrl: '/',
+	onBrokenLinks: 'warn',
+	onBrokenMarkdownLinks: 'warn',
+	favicon: 'img/favicon.png',
+	organizationName: 'Exlint.io',
+	projectName: 'Exlint docs',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+	presets: [
+		[
+			'@docusaurus/preset-classic',
+			{
+				docs: {
+					sidebarPath: require.resolve('./sidebars.js'),
+					breadcrumbs: true,
+					routeBasePath: '/',
+					editUrl: 'https://github.com/Exlint/docs',
+				},
+				theme: {
+					customCss: require.resolve('./src/css/custom.css'),
+				},
+			},
+		],
+	],
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+	themeConfig:
+		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+		({
+			navbar: {
+				logo: {
+					alt: 'Exlint Logo',
+					src: 'img/Exlint-logo.png',
+					srcDark: 'img/logo-dark.png',
+				},
+				items: [
+					{
+						type: 'search',
+						position: 'right',
+					},
+					{
+						href: 'https://github.com/Exlint',
+						position: 'right',
+						className: 'navbar-menu',
+					},
+					{
+						href: 'https://Exlint.io',
+						position: 'right',
+						label: 'Sign up | Login',
+					},
+				],
+			},
+			// footer
+			footer: {
+				logo: {
+					alt: 'Exlint Logo',
+					src: 'img/logo-dark.png',
+				},
+				style: 'dark',
+				links: [
+					{
+						title: 'Community',
+						items: [
+							{
+								label: 'GitHub',
+								href: 'https://github.com/Exlint',
+							},
+						],
+					},
+					{
+						title: 'Sitemap',
+						items: [
+							{
+								label: 'Getting started',
+								href: '/',
+							},
+						],
+					},
+				],
+				copyright: `Copyright © ${new Date().getFullYear()} Exlint.io`,
+			},
+			prism: {
+				theme: lightCodeTheme,
+				darkTheme: darkCodeTheme,
+			},
+			algolia: {
+				appId: 'VBCXPB7UFQ',
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      }),
-    ],
-  ],
+				// Public API key: it is safe to commit it
+				apiKey: '6a129ce5a599323761caf4ac37846eac',
 
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
-        items: [
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
-      },
-    }),
+				indexName: 'Exlint',
+
+				// Optional: see doc section below
+				contextualSearch: true,
+
+				// Optional: path for search page that enabled by default (`false` to disable it)
+				searchPagePath: 'search',
+
+				container: 'div',
+			},
+			zoom: {
+				selector: '.markdown :not(em) > img',
+				config: {
+					// options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+					background: {
+						light: 'rgb(255, 255, 255)',
+						dark: 'rgb(50, 50, 50)',
+					},
+				},
+			},
+		}),
 };
 
 module.exports = config;
