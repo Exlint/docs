@@ -93,10 +93,10 @@ const config = {
 				darkTheme: darkCodeTheme,
 			},
 			algolia: {
-				appId: 'VBCXPB7UFQ',
+				appId: '2LJRR4TT00',
 
 				// Public API key: it is safe to commit it
-				apiKey: '6a129ce5a599323761caf4ac37846eac',
+				apiKey: 'fa678c90b5b05bc60710efad9b5811fd',
 
 				indexName: 'Exlint',
 

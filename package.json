@@ -12,6 +12,7 @@
 		"serve": "docusaurus serve",
 		"write-translations": "docusaurus write-translations",
 		"write-heading-ids": "docusaurus write-heading-ids",
+		"format": "prettier --write \"**/*.{ts,js,json}\"",
 		"typecheck": "tsc"
 	},
 	"dependencies": {
