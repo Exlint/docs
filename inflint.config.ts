@@ -2,11 +2,8 @@ import { Config } from 'inflint';
 
 const inflintConfig: Config = {
 	rules: {
-		'{assets,scripts}/**/*': [2, 'kebab-case'],
-		'{src,tests}/**/*': [2, 'kebab-case.point'],
-		'{src,tests}/**/*.js': 2,
+		'{src}/**/*': [2, 'kebab-case.point'],
 		'**/*.yml': 2,
-		'@types/**/*': [2, 'index.d', { onlyFiles: true }],
 	},
 };
 

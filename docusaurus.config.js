@@ -1,4 +1,4 @@
-// @ts-check
+// @ts-nocheck
 // Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
@@ -8,11 +8,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
 	title: 'Exlint docs',
 	tagline: 'Dinosaurs are cool',
-	url: 'https://your-docusaurus-test-site.com',
+	url: 'http://localhost:3000',
 	baseUrl: '/',
 	onBrokenLinks: 'warn',
 	onBrokenMarkdownLinks: 'warn',
-	favicon: 'img/favicon.png',
+	favicon: 'img/icon.png',
 	organizationName: 'Exlint.io',
 	projectName: 'Exlint docs',
 
@@ -39,8 +39,8 @@ const config = {
 			navbar: {
 				logo: {
 					alt: 'Exlint Logo',
-					src: 'img/Exlint-logo.png',
-					srcDark: 'img/logo-dark.png',
+					src: 'img/darkLogo.png',
+					srcDark: 'img/whiteLogo.png',
 				},
 				items: [
 					{
@@ -59,11 +59,10 @@ const config = {
 					},
 				],
 			},
-			// footer
 			footer: {
 				logo: {
 					alt: 'Exlint Logo',
-					src: 'img/logo-dark.png',
+					src: 'img/icon.png',
 				},
 				style: 'dark',
 				links: [
@@ -94,18 +93,11 @@ const config = {
 			},
 			algolia: {
 				appId: '2LJRR4TT00',
-
 				// Public API key: it is safe to commit it
 				apiKey: 'fa678c90b5b05bc60710efad9b5811fd',
-
 				indexName: 'Exlint',
-
-				// Optional: see doc section below
 				contextualSearch: true,
-
-				// Optional: path for search page that enabled by default (`false` to disable it)
 				searchPagePath: 'search',
-
 				container: 'div',
 			},
 			zoom: {
