@@ -53,7 +53,7 @@ const config = {
 						className: 'navbar-menu',
 					},
 					{
-						href: 'https://Exlint.io',
+						href: 'https://app.exlint.io',
 						position: 'right',
 						label: 'Sign up | Login',
 					},
@@ -72,6 +72,10 @@ const config = {
 							{
 								label: 'GitHub',
 								href: 'https://github.com/Exlint',
+							},
+							{
+								label: 'Discord',
+								href: 'https://discord.gg/sqtbwvgzek',
 							},
 						],
 					},
