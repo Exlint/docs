@@ -54,6 +54,25 @@ const sidebars = {
 			label: 'Supported Libraries',
 			id: 'supported-libraries/index',
 		},
+		{
+			type: 'category',
+			label: 'Data Privacy',
+			collapsed: true,
+			items: [
+				'data-privacy/cli-usage/index',
+				'data-privacy/user-account-data/index',
+				'data-privacy/tokens/index',
+			],
+		},
+		{
+			type: 'category',
+			label: 'Troubleshooting',
+			collapsed: true,
+			items: [
+				'troubleshooting/discord/index',
+				'troubleshooting/github-issue/index',
+			],
+		},
 		// {
 		// 	type: 'link',
 		// 	label: '📚\xa0\xa0RESOURCES',
