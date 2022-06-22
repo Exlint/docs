@@ -19,15 +19,41 @@ const sidebars = {
 	docs: [
 		{
 			type: 'category',
-			label: 'WELCOME',
+			label: 'Welcome',
 			collapsed: true,
-			items: ['welcome/getting-started/index'],
+			items: [
+				'welcome/getting-started/index',
+				'welcome/what-is-exlint/index',
+				'welcome/how-exlint-works/index',
+			],
 		},
-		// {
-		// 	type: 'doc',
-		// 	label: '🗃️\xa0\xa0TROUBLESHOOTING',
-		// 	id: 'troubleshooting/index',
-		// },
+		{
+			type: 'category',
+			label: 'Setup',
+			collapsed: true,
+			items: [
+				'setup/groups/index',
+				'setup/policies/index',
+				'setup/rules/index',
+				'setup/cli-output/index',
+				'setup/cli-argument/index',
+				'setup/token-management/index',
+				'setup/offline-mode/index',
+			],
+		},
+		{
+			type: 'category',
+			label: 'CI/CD Examples',
+			collapsed: true,
+			items: [
+				'cicd-examples/github-action/index',
+			],
+		},
+		{
+			type: 'doc',
+			label: 'Supported Libraries',
+			id: 'supported-libraries/index',
+		},
 		// {
 		// 	type: 'link',
 		// 	label: '📚\xa0\xa0RESOURCES',

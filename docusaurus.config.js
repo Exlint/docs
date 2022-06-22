@@ -7,7 +7,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'Exlint docs',
-	tagline: 'Dinosaurs are cool',
 	url: 'http://localhost:3000',
 	baseUrl: '/',
 	onBrokenLinks: 'warn',
@@ -46,11 +45,6 @@ const config = {
 					{
 						type: 'search',
 						position: 'right',
-					},
-					{
-						href: 'https://github.com/Exlint',
-						position: 'right',
-						className: 'navbar-menu',
 					},
 					{
 						href: 'https://app.exlint.io',
