@@ -18,7 +18,7 @@ Exlint can be used on the command line to run, use and analyze code using custom
 
 :::tip
 
-We don't need access to your code or anything whatsoever for you to setup exlint in your projects!
+We don't need access to your code or anything whatsoever for you to setup Exlint in your projects!
 :::
 
 ---
@@ -29,38 +29,52 @@ Embedded introduction video goes here
 
 ## Quickstart
 
-### 1. Customize your policy group
-
-#### Sign up to access your dashboard
+### 1. Create your first Policy Group
 
 Exlint helps you create multi-policy code compliances using **Groups**. Each Group contains multiple **Policies** with customzied **Rules**:&#x20;
 
+#### [Sign-up](app.exlint.io) to access your dashboard
+
 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-	<img
-		src="/img/welcome/getting-started/signup.png"
-		alt="signup"
-		className={styles.image}
-		style={{ maxWidth: '300px' }}
-	/>
+	<img src="/img/signup.png" alt="signup" className={styles.image} style={{ maxWidth: '300px' }} />
 </div>
 
 #### Initial Group creation
 
 After sign-up, start by creating your first **Group**.
 
-image
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+	<img
+		src="/img/createGroup.png"
+		alt="create-group"
+		className={styles.image}
+		style={{ maxWidth: '600px' }}
+	/>
+</div>
 
-You can then add an initial policy to your new group. (Exlint only supports a small number of Policies, but we are working hard on implementing new ones. Check out our [`Roadmap`](https://exlint.notion.site/))
+#### Adding a new Policy to your Group
 
-image
+Continue by adding an initial **Policy** from our current [supported libraries](/supported-libraries).
+
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+	<img
+		src="/img/policySelection.png"
+		alt="create-group"
+		className={styles.image}
+		style={{ maxWidth: '600px' }}
+	/>
+</div>
 
 #### Configure your selected Policy
 
-// Add relevant text
+-   Describe the policy configuration process
+-   Image of a chosen policy configuration, showing parameters and inputs.
 
 #### Add your custom rules
 
-Choose and configure the rules that you wish for the selected Policy. Read how to set up custom rules at [Understanding custom rules](/custom-rules/custom-rules-overview). <-update
+Choose and configure the rules that you wish for the selected Policy. Read how to set up rules at [Rules](/Rules).
+
+-   Image
 
 ### 2. Install the Exlint CLI
 
@@ -95,13 +109,14 @@ Binary releases can be downloaded from the [releases page](https://github.com/Ex
   </TabItem>
 </Tabs>
 
-#### Authenticate your account with Exlint Dashboard
+#### Authenticate your CLI with Exlint Dashboard
 
-text, image
+-   Explain Auth command
+-   image
 
 ### 3. Analyze your code for bad practices
 
-Explain Use
+#### Use Exlint on your code to....(explain Use)
 
 <Tabs>
   <TabItem value='Linux' label='Linux' default>
@@ -126,9 +141,42 @@ Explain Use
   </TabItem>
 </Tabs>
 
-Explain Run
+Explain results:
+
+-   Image
+
+#### Run Exlint on your code to....(explain Run)
+
+<Tabs>
+  <TabItem value='Linux' label='Linux' default>
+
+    datree test ~/.datree/k8s-demo.yaml
+
+  </TabItem>
+  <TabItem value='MacOS' label='MacOS'>
+
+    datree test ~/.datree/k8s-demo.yaml
+
+  </TabItem>
+  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
+
+    datree.exe test $env:USERPROFILE\.datree\k8s-demo.yaml
+
+  </TabItem>
+  <TabItem value='Docker' label='Docker'>
+
+    cat ~/.datree/k8s-demo.yaml | docker run -i datree/datree test -
+
+  </TabItem>
+</Tabs>
+
+Explain results:
+
+-   image
 
 ### 4. Integrate Exlint into your CI&#x20;
 
-Keep your repositories clean and stable by preventing misconfigurations as early as possible.
-Check out our [integrations](/integrations) and [CI/CD EXAMPLES](/cicd-examples) for best practices with the most popular CI/CD platforms.
+Keep your repositories clean and stable by preventing bad practices as early as possible.
+Check out our currently supported [CI/CD Examples](/cicd-examples/github-action) for best practices with the most popular CI/CD platforms.
+
+-   Image (github action)
