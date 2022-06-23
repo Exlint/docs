@@ -19,7 +19,7 @@ const sidebars = {
 	docs: [
 		{
 			type: 'category',
-			label: 'Welcome',
+			label: '👋\xa0\xa0Welcome',
 			collapsed: true,
 			items: [
 				'welcome/getting-started/index',
@@ -45,9 +45,7 @@ const sidebars = {
 			type: 'category',
 			label: 'CI/CD Examples',
 			collapsed: true,
-			items: [
-				'cicd-examples/github-action/index',
-			],
+			items: ['cicd-examples/github-action/index'],
 		},
 		{
 			type: 'doc',
@@ -68,16 +66,13 @@ const sidebars = {
 			type: 'category',
 			label: 'Troubleshooting',
 			collapsed: true,
-			items: [
-				'troubleshooting/discord/index',
-				'troubleshooting/github-issue/index',
-			],
+			items: ['troubleshooting/discord/index', 'troubleshooting/github-issue/index'],
 		},
-		// {
-		// 	type: 'link',
-		// 	label: '📚\xa0\xa0RESOURCES',
-		// 	href: 'https://github.com/datreeio/awesome-datree/blob/main/README.md',
-		// },
+		{
+			type: 'link',
+			label: 'Discord Community',
+			href: 'https://discord.gg/sqtbwvgzek',
+		},
 	],
 };
 
