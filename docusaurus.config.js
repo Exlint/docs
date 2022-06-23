@@ -98,7 +98,7 @@ const config = {
 							},
 							{
 								label: 'Troubleshooting',
-								href: '/troubleshooting/github-issue',
+								href: '/troubleshooting-and-support',
 							},
 						],
 					},

@@ -63,10 +63,9 @@ const sidebars = {
 			],
 		},
 		{
-			type: 'category',
-			label: 'Troubleshooting',
-			collapsed: true,
-			items: ['troubleshooting/discord/index', 'troubleshooting/github-issue/index'],
+			type: 'doc',
+			label: 'Troubleshooting & Support',
+			id: 'troubleshooting-and-support/index',
 		},
 		{
 			type: 'link',
