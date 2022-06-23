@@ -80,6 +80,26 @@ const config = {
 								label: 'Getting started',
 								href: '/',
 							},
+							{
+								label: 'Setup',
+								href: '/setup/groups',
+							},
+							{
+								label: 'CI/CD Examples',
+								href: '/cicd-examples/github-action',
+							},
+							{
+								label: 'Supported Libraries',
+								href: '/supported-libraries',
+							},
+							{
+								label: 'Data Privacy',
+								href: '/data-privacy/cli-usage',
+							},
+							{
+								label: 'Troubleshooting',
+								href: '/troubleshooting/github-issue',
+							},
 						],
 					},
 				],
@@ -99,7 +119,7 @@ const config = {
 				container: 'div',
 			},
 			zoom: {
-				selector: '.markdown :not(em) > img',
+				selector: '.markdown img',
 				config: {
 					// options you can specify via https://github.com/francoischalifour/medium-zoom#usage
 					background: {
