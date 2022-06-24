@@ -26,6 +26,3 @@ jobs:
 
             - name: Check Files and Directories Linter
               run: pnpm inflint
-
-            - name: Check Typescript
-              run: pnpm type-check

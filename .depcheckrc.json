@@ -4,9 +4,11 @@
 		"commitizen",
 		"lint-staged",
 		"cz-vinyl",
-		"ts-loader",
-		"webpack-cli",
-		"rimraf",
-		"ts-node"
+		"figlet",
+		"chalk",
+		"prettier",
+		"@mdx-js/react",
+		"@docusaurus/plugin-content-docs",
+		"@docusaurus/preset-classic"
 	]
 }
