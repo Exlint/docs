@@ -11,7 +11,7 @@ const config = {
 	baseUrl: '/',
 	onBrokenLinks: 'warn',
 	onBrokenMarkdownLinks: 'warn',
-	favicon: 'img/icon.png',
+	favicon: 'images/icon.png',
 	organizationName: 'Exlint.io',
 	projectName: 'Exlint docs',
 
@@ -38,8 +38,8 @@ const config = {
 			navbar: {
 				logo: {
 					alt: 'Exlint Logo',
-					src: 'img/darkLogo.png',
-					srcDark: 'img/whiteLogo.png',
+					src: 'images/dark-logo.png',
+					srcDark: 'images/white-logo.png',
 				},
 				items: [
 					{
@@ -56,7 +56,7 @@ const config = {
 			footer: {
 				logo: {
 					alt: 'Exlint Logo',
-					src: 'img/icon.png',
+					src: 'images/icon.png',
 				},
 				style: 'dark',
 				links: [

@@ -1,4 +1,4 @@
 module.exports = {
-	'**/*.{ts,js,json}': 'prettier --write',
+	'**/*.{ts,js,json,mdx,css}': 'prettier --write',
 	'**/*': 'inflint -c inflint.config.ts',
 };
