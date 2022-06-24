@@ -11,8 +11,8 @@ import styles from './styles.module.css';
 
 # Groups
 
-"Groups" in the concept of controlling multiple policies together.
-This is the core of your code conventions, where you control which libraries should be used when using the group.
+A Group is a concept of controlling multiple policies together.
+This is the core of your code conventions, where you control which libraries should be used when using a group.
 Using a group identifier, you will be able to run the configured policies both locally (CLI) and in a CI environment.
 
 ## Creating a Group
@@ -35,5 +35,5 @@ you can run the group policies over the project by running `exlint run`.
 Exlint will automatically use the configured group, and will output the policies' outputs.
 
 :::tip
-You can easily switch group in your project by running the `exlint use <group_i>` command again!
+You can easily switch group in your project by running the `exlint use <group_id>` command again!
 :::
