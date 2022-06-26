@@ -1,129 +1,56 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 slug: /setup/policies
 title: Policies
 description: Exlint is a CLI tool that provides developers a quick and efficient application of multiple coding rule policies in multiple projects
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import styles from './styles.module.css';
 
-# Getting started
+# Policies
 
-Say goodbye to bad code and messy multi-repo compliance.
-Using our CLI, you easily enforce best practices to organization-wide projects using global code compliances.
+A Policy is a concept of controlling and configuring your code convention using a specific library.
+This is where your select a library to use, and configure what rules and configurations should be applied together with your code.
+Once created, you can already use your pre-created group identifier and run the policy against your code.
 
-Exlint can be used on the command line to run, use and analyze code using customized policy groups.
+## Creating a Policy
 
-:::tip
+In the [dashboard](https://app.exlint.io), you can create a policy by first [creating a group](https://app.exlint.io/setup/groups#creating-a-group).
+When creating a group, you can right after create your first policy by clicking the "New" Button.
 
-We don't need access to your code or anything whatsoever for you to setup exlint in your projects!
-:::
-
----
-
-Embedded introduction video goes here
-
----
-
-## Quickstart
-
-### 1. Customize your policy group
-
-#### Sign up to access your dashboard
-
-Exlint helps you create multi-policy code compliances using **Groups**. Each Group contains multiple **Policies** with customzied **Rules**:&#x20;
-
-<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-	<img src="/images/signup.png" alt="signup" className={styles.image} style={{ maxWidth: '300px' }} />
+<div className={styles.imageContainer}>
+	<img
+		src="/images/create-group.png"
+		alt="create a group"
+		className={styles.image}
+		style={{ maxWidth: '800px' }}
+	/>
 </div>
 
-#### Initial Group creation
+In the next step, you should select which library to apply with the policy.
 
-After sign-up, start by creating your first **Group**.
+<div className={styles.imageContainer}>
+	<img
+		src="/images/library-selection.png"
+		alt="select a policy library"
+		className={styles.image}
+		style={{ maxWidth: '800px' }}
+	/>
+</div>
 
-image
+In the next step, your can apply some configurations with your policy. These configurations must follow the library guideline.
 
-You can then add an initial policy to your new group. (Exlint only supports a small number of Policies, but we are working hard on implementing new ones. Check out our [`Roadmap`](https://exlint.notion.site/))
+<div className={styles.imageContainer}>
+	<img
+		src="/images/library-selection.png"
+		alt="select a policy library"
+		className={styles.image}
+		style={{ maxWidth: '800px' }}
+	/>
+</div>
 
-image
+For the final step, if the library has some rules to apply with, [you will able to configure some](https://app.exlint.io/setup/rules#creating-a-group).
 
-#### Configure your selected Policy
+## Using a Policy
 
-// Add relevant text
-
-#### Add your custom rules
-
-Choose and configure the rules that you wish for the selected Policy. Read how to set up custom rules at [Understanding custom rules](/custom-rules/custom-rules-overview). <-update
-
-### 2. Install the Exlint CLI
-
-Binary releases can be downloaded from the [releases page](https://github.com/Exlint/CLI/releases) or can be installed directly
-
-<Tabs>
-  <TabItem value='Linux' label='Linux' default>
-
-    curl https://get.datree.io | /bin/bash
-
-  </TabItem>
-  <TabItem value='MacOS' label='MacOS'>
-
-    curl https://get.datree.io | /bin/bash
-
-  </TabItem>
-  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
-
-    iwr -useb https://get.datree.io/windows_install.ps1 | iex
-
-  </TabItem>
-  <TabItem value='Homebrew' label='Homebrew'>
-
-    brew tap datreeio/datree
-    brew install datreeio/datree/datree
-
-  </TabItem>
-  <TabItem value='Docker' label='Docker'>
-
-    docker pull datree/datree
-
-  </TabItem>
-</Tabs>
-
-#### Authenticate your account with Exlint Dashboard
-
-text, image
-
-### 3. Analyze your code for bad practices
-
-Explain Use
-
-<Tabs>
-  <TabItem value='Linux' label='Linux' default>
-
-    datree test ~/.datree/k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='MacOS' label='MacOS'>
-
-    datree test ~/.datree/k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
-
-    datree.exe test $env:USERPROFILE\.datree\k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='Docker' label='Docker'>
-
-    cat ~/.datree/k8s-demo.yaml | docker run -i datree/datree test -
-
-  </TabItem>
-</Tabs>
-
-Explain Run
-
-### 4. Integrate Exlint into your CI&#x20;
-
-Keep your repositories clean and stable by preventing misconfigurations as early as possible.
-Check out our [integrations](/integrations) and [CI/CD EXAMPLES](/cicd-examples) for best practices with the most popular CI/CD platforms.
+Using a policy in your repository can be done only when [using a group](https://app.exlint.io/setup/groups#using-a-group).
