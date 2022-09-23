@@ -29,19 +29,86 @@ Embedded introduction video goes here
 
 ## Quickstart
 
-### 1. Create your first Policy Group
+### 1. Install the Exlint CLI
 
-Exlint helps you create multi-policy code compliances using **Groups**. Each Group contains multiple **Policies** with customzied **Rules**:&#x20;
+Binary releases can be downloaded from the [releases page](https://github.com/Exlint/CLI/releases) or can be installed directly
 
-#### [Sign-up](https://app.exlint.io) to access your dashboard
+<Tabs>
+  <TabItem value='Linux' label='Linux' default>
 
-<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-	<img src="/images/signup.png" alt="signup" className={styles.image} style={{ maxWidth: '300px' }} />
-</div>
+    curl https://get.datree.io | /bin/bash
 
-#### Initial Group creation
+  </TabItem>
+  <TabItem value='MacOS' label='MacOS'>
 
-After sign-up, start by creating your first **Group**.
+    curl https://get.datree.io | /bin/bash
+
+  </TabItem>
+  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
+
+    iwr -useb https://get.datree.io/windows_install.ps1 | iex
+
+  </TabItem>
+  <TabItem value='Homebrew' label='Homebrew'>
+
+    brew tap datreeio/datree
+    brew install datreeio/datree/datree
+
+  </TabItem>
+  <TabItem value='Docker' label='Docker'>
+
+    docker pull datree/datree
+
+  </TabItem>
+</Tabs>
+
+---
+
+*video*
+
+---
+
+### 2. Run a compliance check against your repo
+Run the CLI against your code using a recommended compliance **or** if you already have a compliance set up, sync it to Exlint to run as a Group:
+
+:::note
+Exlint doesn't yet support every linter library.
+Check out which libraries are [currently supported](#).
+:::
+
+**To run a recommended compliance:**
+
+    exlint run -r
+
+You will get the following output in your CLI:
+*cli image*
+
+
+**To sync your compliance as an Exlint Group:**
+
+    exlint sync
+
+Exlint will sync your compliance as a group and run it locally:
+*image*
+
+---
+
+### 1. Customize your Group
+
+Exlint helps you create multi-policy code compliances using **Groups** as compliances. Each Group can contain multiple linter library **Policies** with customzied configurations and **Rules**:&#x20;
+
+#### Connect your CLI to your Exlint Dashboard
+Use the following command to authenticate to your Exlint Dashboard
+
+    exlint auth
+
+To start using your dashboard, easily sign-up using your private **GitHub** or **Google** account, no need to enter any personal information.
+
+*image*
+
+#### Initial Group customization
+
+After sign-up, you can either use start by creating your first **Group**.
 
 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 	<img
@@ -75,6 +142,12 @@ Continue by adding an initial **Policy** from our current [supported libraries](
 Choose and configure the rules that you wish for the selected Policy. Read how to set up rules at [Rules](/Rules).
 
 -   Image
+
+
+
+
+
+---
 
 ### 2. Install the Exlint CLI
 
