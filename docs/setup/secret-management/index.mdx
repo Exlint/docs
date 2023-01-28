@@ -1,0 +1,34 @@
+---
+sidebar_position: 6
+slug: /setup/token-management
+title: Secret Management
+description: Exlint is a CLI tool that provides developers a quick and efficient application of multiple coding rule policies in multiple projects
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import styles from './styles.module.css';
+
+Exlint provides a built-in secret management feature in the account settings.
+With this feature, you can generate, name, and set an expiration for new secrets.
+
+Here's how you can use this feature:
+
+1. Go to the Account Settings in Exlint Dashboard
+2. Navigate to the `Secret Management` section
+3. Click on `Generate new secret`
+4. Enter a name for the secret and select a desired expiration
+5. Click on `Generate Secret` and copy the generated secret token
+
+:::caution
+After generating a new secret, it is crucial to copy the generated secret token immediately.
+The token will not be accessible after leaving the page and cannot be retrieved later.
+:::
+
+6. Use the secret token for CI usage with our [GitHub Action](/ci/github-action).
+
+By following these steps, you will be able to generate and manage your secrets in Exlint. Remember to keep your secrets secure and to refresh them before they expire.
+
+:::note
+You can also refresh a secret to generate a new token.
+:::

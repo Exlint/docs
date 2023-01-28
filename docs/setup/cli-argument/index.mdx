@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 3
 slug: /setup/cli-argument
 title: CLI Argument
 description: Exlint is a CLI tool that provides developers a quick and efficient application of multiple coding rule policies in multiple projects
@@ -8,3 +8,35 @@ description: Exlint is a CLI tool that provides developers a quick and efficient
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import styles from './styles.module.css';
+
+Exlint's command-line interface (CLI) allows you to run Exlint on your codebase from the command line. The following arguments are available:
+
+`auth`: This argument is used to authenticate your Exlint account. You will be prompted to enter your API key.
+
+`use`: This argument is used to specify the group ID you want to run Exlint on. The group ID can be found on the Exlint dashboard.
+
+`run`: This argument is used to run Exlint on your codebase. The `--fix` or `-f` flag can be used to automatically fix any issues found by Exlint.
+
+#### Examples:
+
+To authenticate your Exlint account, you can use the following command:
+
+```bash
+exlint auth
+```
+
+To run Exlint on a specific group, you can use the following command:
+
+```bash
+exlint use <group-id>
+```
+
+To run Exlint and automatically fix any issues found, you can use the following command:
+
+```bash
+exlint run --fix
+```
+
+:::info
+Please note that if you are using the run command, you should have previously used the use command to specify the group you want to run exlint on.
+:::

@@ -20,18 +20,22 @@ Once you've created a group, you can configure its policies to suit your needs.
 
 Read more about configuring policies in the [policies section](/setup/policies).
 
-## Using a Group
+## Running a Group
 
 To use an Exlint Group in your project, you'll first need to configure an account on the Exlint Dashboard.
 
 Once your account is set up, use `exlint auth` to authenticate your user with Exlint.
 
-    exlint auth
+```bash
+exlint auth
+```
 
 Now you can use the group in your project by running `exlint use <group_id>` in the terminal from your project's root folder.
 Exlint will configure your project with the required libraries and plugins for easy development. You can also see your linters in action if the linter support live linting.
 
-    exlint use <group_id>
+```bash
+exlint use <group_id>
+```
 
 :::tip
 You can easily switch group in your project by running the `exlint use <group_id>` command again!

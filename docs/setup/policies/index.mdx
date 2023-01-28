@@ -7,22 +7,92 @@ description: Exlint is a CLI tool that provides developers a quick and efficient
 
 import styles from './styles.module.css';
 
-A Policy is a way to apply a set of rules and configurations to your code using a specific library. This document will guide you through the process of creating and using a Policy in Exlint.
+A Policy is a way to apply a set of rules and configurations to your code using a specific library.
+This document will guide you through the process of creating and using a Policy in Exlint.
 
 ## Policy in a nutshell
 
-1. In the Exlint dashboard, select the group you want to add a new policy to.
-2. Select the library you want to use for your Policy.
-3. Apply the appropriate configurations for your Policy, following the library guidelines.
-4. If the library has rules that can be applied, configure them as needed.
-5. Run the Policy's Group to get results!
+1. In the [Exlint Dashboard](https://app.exlint.io), select the `Group` you want to add a new Policy to.
+2. When creating a new Policy, select the library you want to use for your Policy.
+3. Apply the appropriate `configurations` for your Policy, following the library guidelines.
+4. If the library has `rules` that can be applied, configure them as needed.
+5. `Run` the Policy's Group to get results! ([Running a Group](/setup/groups#running-a-group))
 
 ## Configuring a Policy
 
+Configuring an Exlint Policy consists of 4 main parts:
+
+-   [Global Policy configurations](#global-policy-configurations) - Configurations for the policy itself
+-   [File list](#file-list) - The files that the policy should run on
+-   [Ignore list](#ignore-list) - The files that the policy should ignore
+-   [Rules](#rules) - Customizable rules for linting and scanning code under best practices
+
+:::info
+Not all libraries require all 4.
+For example, Prettier has no `Rules`, and all configuration is `Global`.
+:::
+
 ### Global Policy configurations
+
+When configuring a global configuration, you have two options:
+
+1. `Code-based configuration`: This option allows you to manually set the configurations in your codebase. You can set the configurations using the library's specific syntax and guidelines.
+
+    :::caution
+    When configuring using `Code-based`, policy `rules` have to be included in the global configuration.
+    :::
+
+2. `Selection (UI) based configuration`: This option allows you to set the configurations using a user interface, such as a dashboard. These selections will be translated into code-based configurations that can be applied to your policy.
+
+:::tip
+Both options will produce the same result, it's just a matter of preference and ease of use.
+:::
 
 ### File list
 
+The `File list` section allows you to specify which files the policy should run on.
+This is useful if you want to only apply the policy to specific files or directories in your codebase.
+
+To configure the File list, you can use `code-based` configuration.
+This can be done by including the file paths in File list the configuration file.
+
+You can also use wildcards such as `/*` and `/*/*` to match multiple files or directories.
+
+Here is an example of how to use wildcards to specify all .js files in the project's directory:
+
+```yaml title:"Exlint File list"
+src/**/*.{js,jsx}
+```
+
 ### Ignore list
 
+The Ignore List is a list of files or directories that you do not want the Exlint Policy to run on.
+This can be useful if you have certain files or directories that are not relevant to the Policy, or if you have files or directories that are causing errors or false positives.
+
+To use the Ignore List, you can specify the files or directories you want to ignore in the Exlint Dashboard when creating or editing a Policy.
+
+Here are a few examples of how to use the Ignore List:
+
+-   To ignore a specific file, you can enter the file path, for example: `src/data/secret.js`
+-   To ignore all files and directories in a certain path, you can use wildcards, for example: `src/data/*` to ignore all files and directories inside the `src/data` directory.
+
+:::note
+Be careful when using wildcards, as they can cause unexpected results if not used correctly.
+:::
+
 ### Rules
+
+The `Rules` section of an Exlint Policy allows you to customize how your code is linted and scanned for best practices.
+There are two ways to configure Rules in a Policy:
+
+-   `Code-based configuration`: you can configure Rules in the global `Policy configurations` section of your Policy.
+
+    :::info
+    This means that the `Rules` will be configured directly in the code, just like when configuring in your IDE.
+    :::
+
+-   `Selection-based configuration`: you can also configure Rules by selecting and configuring them in the `Rules` tab of your Policy.
+    This allows you to select and configure Rules using a user-friendly interface.
+
+    -   Quickly filter out rules and enable / disable using UI.
+    -   Configure rules using the same `Seletcion-based` configuration format.

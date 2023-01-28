@@ -30,9 +30,9 @@ const sidebars = {
 			items: [
 				'setup/groups/index',
 				'setup/policies/index',
-				'setup/cli-output/index',
 				'setup/cli-argument/index',
-				'setup/token-management/index',
+				'setup/cli-output/index',
+				'setup/secret-management/index',
 			],
 		},
 		{
