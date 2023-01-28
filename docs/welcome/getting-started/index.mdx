@@ -80,11 +80,14 @@ Use the following command to authenticate with your Exlint account:
 To use a group, copy its identifier and use it with the `use` command in the Exlint CLI.
 This will adjust your IDE and install necessary extensions and libraries.
 
-    exlint use
+    exlint use <group_id>
 
 Run a group scan against your code using the `run` command:
 
-    exlint run
+    exlint run [options]
+
+You can also run the command with `--fix` or `-f` option.
+Providinig this option will make Exlint try to automatically fix your code issues.
 
 ### 4. Integrate Exlint into your CI&#x20;
 
