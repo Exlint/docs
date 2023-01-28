@@ -7,31 +7,38 @@ description: Exlint is a CLI tool that provides developers a quick and efficient
 
 import styles from './styles.module.css';
 
-# Groups
+Exlint's Groups feature allows you to manage and enforce coding standards across multiple projects and teams.
 
-A Group is a concept of controlling multiple policies together.
-This is the core of your code conventions, where you control which libraries should be used when using a group.
-Using a group identifier, you will be able to run the configured policies both locally (CLI) and in a CI environment.
+## What are Exlint Groups?
+
+A Group is a set of policies that you can configure to control multiple projects together. These policies determine which libraries and plugins should be used when working with a particular group.
 
 ## Creating a Group
 
-In the [dashboard](https://app.exlint.io), you can create a group by visiting the Group Center page.
-When creating a group, it will be automatically set with an unique identifier for a later use.
-After creating a group, you can configure the group's policies.
+To create a group, you'll need to visit the Group Center page on the Exlint Dashboard. Here, you can create a new group and assign it a unique identifier.
+Once you've created a group, you can configure its policies to suit your needs.
 
-<div className={styles.imageContainer}>
-	<img src="/images/create-group.png" alt="signup" className={styles.image} style={{ maxWidth: '800px' }} />
-</div>
+Read more about configuring policies in the [policies section](/setup/policies).
 
-## Using a group
+## Using a Group
 
-Using a group in your repository can be done straightforward.
-Open a terminal in your project folder, and run `exlint use <group_id>`.
-Exlint will configure your project with the required libraries and plugins for easy development.
-You can already see your linters in action (if the linter support live linting). After configuring your project with a group,
-you can run the group policies over the project by running `exlint run`.
-Exlint will automatically use the configured group, and will output the policies' outputs.
+To use an Exlint Group in your project, you'll first need to configure an account on the Exlint Dashboard.
+
+Once your account is set up, use `exlint auth` to authenticate your user with Exlint.
+
+    exlint auth
+
+Now you can use the group in your project by running `exlint use <group_id>` in the terminal from your project's root folder.
+Exlint will configure your project with the required libraries and plugins for easy development. You can also see your linters in action if the linter support live linting.
+
+    exlint use <group_id>
 
 :::tip
 You can easily switch group in your project by running the `exlint use <group_id>` command again!
 :::
+
+To run the group policies over your project, you can use the command `exlint run`. Exlint will automatically use the configured group and output the policies' results.
+
+    exlint run [options]
+
+You can also run the command with `--fix` or `-f` option. Providinig this option will make Exlint try to automatically fix your code issues.

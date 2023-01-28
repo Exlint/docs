@@ -7,50 +7,22 @@ description: Exlint is a CLI tool that provides developers a quick and efficient
 
 import styles from './styles.module.css';
 
-# Policies
+A Policy is a way to apply a set of rules and configurations to your code using a specific library. This document will guide you through the process of creating and using a Policy in Exlint.
 
-A Policy is a concept of controlling and configuring your code convention using a specific library.
-This is where your select a library to use, and configure what rules and configurations should be applied together with your code.
-Once created, you can already use your pre-created group identifier and run the policy against your code.
+## Policy in a nutshell
 
-## Creating a Policy
+1. In the Exlint dashboard, select the group you want to add a new policy to.
+2. Select the library you want to use for your Policy.
+3. Apply the appropriate configurations for your Policy, following the library guidelines.
+4. If the library has rules that can be applied, configure them as needed.
+5. Run the Policy's Group to get results!
 
-In the [dashboard](https://app.exlint.io), you can create a policy by first [creating a group](https://app.exlint.io/setup/groups#creating-a-group).
-When creating a group, you can right after create your first policy by clicking the "New" Button.
+## Configuring a Policy
 
-<div className={styles.imageContainer}>
-	<img
-		src="/images/create-group.png"
-		alt="create a group"
-		className={styles.image}
-		style={{ maxWidth: '800px' }}
-	/>
-</div>
+### Global Policy configurations
 
-In the next step, you should select which library to apply with the policy.
+### File list
 
-<div className={styles.imageContainer}>
-	<img
-		src="/images/library-selection.png"
-		alt="select a policy library"
-		className={styles.image}
-		style={{ maxWidth: '800px' }}
-	/>
-</div>
+### Ignore list
 
-In the next step, your can apply some configurations with your policy. These configurations must follow the library guideline.
-
-<div className={styles.imageContainer}>
-	<img
-		src="/images/library-selection.png"
-		alt="select a policy library"
-		className={styles.image}
-		style={{ maxWidth: '800px' }}
-	/>
-</div>
-
-For the final step, if the library has some rules to apply with, [you will able to configure some](https://app.exlint.io/setup/rules#creating-a-group).
-
-## Using a Policy
-
-Using a policy in your repository can be done only when [using a group](https://app.exlint.io/setup/groups#using-a-group).
+### Rules

@@ -1,0 +1,28 @@
+---
+sidebar_position: 1
+slug: /cicd-examples/github-action
+title: GitHub Action
+description: Exlint is a CLI tool that provides developers a quick and efficient application of multiple coding rule policies in multiple projects
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import styles from './styles.module.css';
+
+The [Exlint Action](https://github.com/Exlint/actions) is a GitHub Action that allows you to integrate Exlint into your CI (Continuous Integration) workflow.
+It can help you improve the quality of your code by catching errors and potential bugs, enforcing coding standards, and identifying security vulnerabilities.
+
+To use the Exlint Action, you must have a token and a group configured. You can get your token for CI usage on the secret management page of [app.exlint.io](https://app.exlint.io).
+
+To add the Exlint Action to your workflow, include the following in your config file:
+
+```yaml title:"Github Action"
+- uses: Exlint/actions@v1.0.0
+  with:
+      # Your configured group ID - Required
+      groupId: ''
+      # Your token for CI - Required
+      token: ''
+```
+
+The Exlint Action will then run Exlint on your codebase and check for any issues or violations of the rules specified in your group.

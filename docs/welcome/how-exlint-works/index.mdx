@@ -1,7 +1,7 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 slug: /welcome/how-exlint-works
-title: How Exlint Works?
+title: How Exlint works
 description: Exlint is a CLI tool that provides developers a quick and efficient application of multiple coding rule policies in multiple projects
 ---
 
@@ -9,24 +9,36 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import styles from './styles.module.css';
 
-# How Exlint Works?
+# How Exlint works
 
-Datree's CLI integration provides a policy enforcement solution to run automatic checks for rule violations and misconfigurations in your Kubernetes manifest files.
-When rule violations are found, Datree produces an alert which guides the developer to fix the issue while explaining the reason behind the rule.
-Datree offers simple CI integration with various popular platforms to make your development pipeline safe and stable.
+Exlint is a tool that helps you maintain code quality and compliance by keeping centralizing and streamlining coding standards.
+It works by running a set of linters as a group on your codebase, and identifying any issues or violations of the specified rules.
 
-## What is does Exlint analyze?
+When you run Exlint, it will automatically adjust your IDE and install any necessary extensions and libraries. This allows you to see the results of the linter checks directly in your code editor.
 
-Each policy check consists of 3 consecutive phases:
+Exlint also provides a web-based dashboard that allows you to view and manage your Exlint Groups, including adding and removing linters, and managing the configuration of your linters.
+With this tool, you can easily centralize your compliance efforts and maintain code quality.
 
--   YAML Validation - verifies that the file is a valid YAML.
--   Schema Validation - verifies that the file is a valid Kubernetes file. This is done using Kubeconform.
--   Policy Check - checks the YAML against your configured policy.
+## What does Exlint analyze?
+
+Exlint analyzes your codebase to check for issues and violations of the specified policy and linter rules.
+A linter is a tool that checks for potential errors and coding standard violations in the code.
+The types of issues that Exlint can analyze include:
+
+-   Syntax errors
+-   Code style violations (e.g. indentation, naming conventions)
+-   Potential bugs and logical errors
+-   Security vulnerabilities
+-   Performance issues
+-   Unused or deprecated code
+
+Since Exlint is in beta, we only support a limited number of policies ([supported libraries](/supported-libraries)), but we're incrementally adding support for more policies and languages.
+The policies which you are using in an Exlint Group will specify what type of analysis it can perform and what type of error it can detect.
 
 ## Where does the analysis occur?
 
-Datree's policy evaluation process is entirely local. Your files and their contents are not sent to our backend, as the CLI performs the policy check on your machine.
-Only metadata is sent to our backend, which is used to display your policy check history on your dashboard.
+Exlint's group run process is entirely local. Your files and their contents are not sent to our backend, as the CLI performs the run on your machine.
+Only metadata is sent to our backend, which will be ([in progress!](https://github.com/orgs/Exlint/projects/3)) used to display your run history on your dashboard.
 
 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 	<img

@@ -21,11 +21,7 @@ const sidebars = {
 			type: 'category',
 			label: '👋\xa0\xa0Welcome',
 			collapsed: true,
-			items: [
-				'welcome/getting-started/index',
-				'welcome/what-is-exlint/index',
-				'welcome/how-exlint-works/index',
-			],
+			items: ['welcome/getting-started/index', 'welcome/how-exlint-works/index'],
 		},
 		{
 			type: 'category',
@@ -34,18 +30,16 @@ const sidebars = {
 			items: [
 				'setup/groups/index',
 				'setup/policies/index',
-				'setup/rules/index',
 				'setup/cli-output/index',
 				'setup/cli-argument/index',
 				'setup/token-management/index',
-				'setup/offline-mode/index',
 			],
 		},
 		{
 			type: 'category',
-			label: 'CI/CD Examples',
+			label: 'CI',
 			collapsed: true,
-			items: ['cicd-examples/github-action/index'],
+			items: ['ci/github-action/index'],
 		},
 		{
 			type: 'doc',
@@ -56,11 +50,7 @@ const sidebars = {
 			type: 'category',
 			label: 'Data Privacy',
 			collapsed: true,
-			items: [
-				'data-privacy/cli-usage/index',
-				'data-privacy/user-account-data/index',
-				'data-privacy/tokens/index',
-			],
+			items: ['data-privacy/cli-usage/index', 'data-privacy/user-account-data/index'],
 		},
 		{
 			type: 'doc',

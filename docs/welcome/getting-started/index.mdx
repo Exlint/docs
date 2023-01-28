@@ -9,247 +9,84 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import styles from './styles.module.css';
 
-# Getting started
+# Getting Started
 
-Say goodbye to bad code and messy multi-repo compliance.
-Using our CLI, you easily enforce best practices to organization-wide projects using global code compliances.
+Introducing Exlint - a powerful tool that simplifies compliance management in your software projects.
+Say goodbye to the hassle of managing multiple repositories and enforcing best practices.
 
-Exlint can be used on the command line to run, use and analyze code using customized policy groups.
+With Exlint, you can easily run centralized coding compliance checks on any project, both locally and in a continuous integration (CI) environment, using simple command-line commands.
+Get started now and streamline your compliance management process with Exlint.
 
 :::tip
 
-We don't need access to your code or anything whatsoever for you to setup Exlint in your projects!
+Exlint can be set up without access to your code or any other sensitive information, ensuring security and privacy.
 :::
 
 ---
 
-Embedded introduction video goes here
-
----
-
-## Quickstart
-
-### 1. Install the Exlint CLI
-
-Binary releases can be downloaded from the [releases page](https://github.com/Exlint/CLI/releases) or can be installed directly
-
-<Tabs>
-  <TabItem value='Linux' label='Linux' default>
-
-    curl https://get.datree.io | /bin/bash
-
-  </TabItem>
-  <TabItem value='MacOS' label='MacOS'>
-
-    curl https://get.datree.io | /bin/bash
-
-  </TabItem>
-  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
-
-    iwr -useb https://get.datree.io/windows_install.ps1 | iex
-
-  </TabItem>
-  <TabItem value='Homebrew' label='Homebrew'>
-
-    brew tap datreeio/datree
-    brew install datreeio/datree/datree
-
-  </TabItem>
-  <TabItem value='Docker' label='Docker'>
-
-    docker pull datree/datree
-
-  </TabItem>
-</Tabs>
-
----
-
-*video*
-
----
-
-### 2. Run a compliance check against your repo
-Run the CLI against your code using a recommended compliance **or** if you already have a compliance set up, sync it to Exlint to run as a Group:
-
-:::note
-Exlint doesn't yet support every linter library.
-Check out which libraries are [currently supported](#).
-:::
-
-**To run a recommended compliance:**
-
-    exlint run -r
-
-You will get the following output in your CLI:
-*cli image*
-
-
-**To sync your compliance as an Exlint Group:**
-
-    exlint sync
-
-Exlint will sync your compliance as a group and run it locally:
-*image*
-
----
-
-### 1. Customize your Group
-
-Exlint helps you create multi-policy code compliances using **Groups** as compliances. Each Group can contain multiple linter library **Policies** with customzied configurations and **Rules**:&#x20;
-
-#### Connect your CLI to your Exlint Dashboard
-Use the following command to authenticate to your Exlint Dashboard
-
-    exlint auth
-
-To start using your dashboard, easily sign-up using your private **GitHub** or **Google** account, no need to enter any personal information.
-
-*image*
-
-#### Initial Group customization
-
-After sign-up, you can either use start by creating your first **Group**.
-
 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-	<img
-		src="/images/create-group.png"
-		alt="Create a Group"
-		className={styles.image}
-		style={{ maxWidth: '600px' }}
-	/>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" href="/static/cmd/asciinema-player.css" />
+		</head>
+		<body>
+			<div id="player"></div>
+			<script src="/static/cmd/asciinema-player.min.js"></script>
+			<script>
+				AsciinemaPlayer.create( '/static/cmd/554778.cast', document.getElementById('player'), );
+			</script>
+		</body>
+	</html>
 </div>
 
-#### Adding a new Policy to your Group
-
-Continue by adding an initial **Policy** from our current [supported libraries](/supported-libraries).
-
-<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-	<img
-		src="/images/policy-selection.png"
-		alt="policy-selection"
-		className={styles.image}
-		style={{ maxWidth: '600px' }}
-	/>
-</div>
-
-#### Configure your selected Policy
-
--   Describe the policy configuration process
--   Image of a chosen policy configuration, showing parameters and inputs.
-
-#### Add your custom rules
-
-Choose and configure the rules that you wish for the selected Policy. Read how to set up rules at [Rules](/Rules).
-
--   Image
-
-
-
-
-
 ---
+
+## Using Exlint
+
+### 1. Centralize your compliance in Exlint
+
+Get started by creating an account at [app.exlint.io](https://app.exlint.io).
+
+Create your first Exlint Group, where can organize and manage different policies, and later run them as a group.
+These policies are used to check your code for compliance with industry standards and best practices.
+
+Read more about configuring groups [here](setup/groups).
 
 ### 2. Install the Exlint CLI
 
-Binary releases can be downloaded from the [releases page](https://github.com/Exlint/CLI/releases) or can be installed directly
+To install the Exlint CLI with `npm`, run one of the following commands:
 
 <Tabs>
-  <TabItem value='Linux' label='Linux' default>
+  <TabItem value='Global' label='Global' default>
 
-    curl https://get.datree.io | /bin/bash
-
-  </TabItem>
-  <TabItem value='MacOS' label='MacOS'>
-
-    curl https://get.datree.io | /bin/bash
+    npm install --global @exlint.io/cli
 
   </TabItem>
-  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
+  <TabItem value='Local' label='Local' default>
 
-    iwr -useb https://get.datree.io/windows_install.ps1 | iex
-
-  </TabItem>
-  <TabItem value='Homebrew' label='Homebrew'>
-
-    brew tap datreeio/datree
-    brew install datreeio/datree/datree
-
-  </TabItem>
-  <TabItem value='Docker' label='Docker'>
-
-    docker pull datree/datree
+    npm install --save-dev @exlint.io/cli
 
   </TabItem>
 </Tabs>
 
-#### Authenticate your CLI with Exlint Dashboard
+### 2. Connect your CLI to your Exlint Dashboard
 
--   Explain Auth command
--   image
+Use the following command to authenticate with your Exlint account:
 
-### 3. Analyze your code for bad practices
+    exlint auth
 
-#### Use Exlint on your code to....(explain Use)
+### 3. Run an Exlint Group scan on your repository
 
-<Tabs>
-  <TabItem value='Linux' label='Linux' default>
+To use a group, copy its identifier and use it with the `use` command in the Exlint CLI.
+This will adjust your IDE and install necessary extensions and libraries.
 
-    datree test ~/.datree/k8s-demo.yaml
+    exlint use
 
-  </TabItem>
-  <TabItem value='MacOS' label='MacOS'>
+Run a group scan against your code using the `run` command:
 
-    datree test ~/.datree/k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
-
-    datree.exe test $env:USERPROFILE\.datree\k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='Docker' label='Docker'>
-
-    cat ~/.datree/k8s-demo.yaml | docker run -i datree/datree test -
-
-  </TabItem>
-</Tabs>
-
-Explain results:
-
--   Image
-
-#### Run Exlint on your code to....(explain Run)
-
-<Tabs>
-  <TabItem value='Linux' label='Linux' default>
-
-    datree test ~/.datree/k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='MacOS' label='MacOS'>
-
-    datree test ~/.datree/k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='Windows (PowerShell)' label='Windows (PowerShell)'>
-
-    datree.exe test $env:USERPROFILE\.datree\k8s-demo.yaml
-
-  </TabItem>
-  <TabItem value='Docker' label='Docker'>
-
-    cat ~/.datree/k8s-demo.yaml | docker run -i datree/datree test -
-
-  </TabItem>
-</Tabs>
-
-Explain results:
-
--   image
+    exlint run
 
 ### 4. Integrate Exlint into your CI&#x20;
 
-Keep your repositories clean and stable by preventing bad practices as early as possible.
-Check out our currently supported [CI/CD Examples](/cicd-examples/github-action) for best practices with the most popular CI/CD platforms.
-
--   Image (github action)
+Keep your CI aligned with your stardartized Exlint compliance using our [GitHub Action](/cicd-examples/github-action).
+Check out our [roadmap](https://github.com/orgs/Exlint/projects/3) to see which other integrations we're planning to support (or tell us if we're missing the one you like!)
