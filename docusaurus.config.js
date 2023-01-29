@@ -6,14 +6,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'Exlint docs',
+	title: 'Exlint Docs',
 	url: 'http://localhost:3000',
 	baseUrl: '/',
 	onBrokenLinks: 'warn',
 	onBrokenMarkdownLinks: 'warn',
 	favicon: 'images/icon.png',
 	organizationName: 'Exlint.io',
-	projectName: 'Exlint docs',
+	projectName: 'Exlint Docs',
 
 	presets: [
 		[
