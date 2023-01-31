@@ -1,9 +1,9 @@
 name: Deploy docs to AWS
 
 on:
-  push:
-    branches:
-      - PRODUCTION
+    push:
+        branches:
+            - PRODUCTION
 
 jobs:
     deploy:
@@ -11,9 +11,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-          - name: Repository Dispatch
-            uses: peter-evans/repository-dispatch@v2
-            with:
-              token: ${{ secrets.DISPATCH_GH_TOKEN }}
-              repository: Exlint/dashboard
-              event-type: docs-production
+            - name: Repository Dispatch
+              uses: peter-evans/repository-dispatch@v2
+              with:
+                  token: ${{ secrets.DISPATCH_GH_TOKEN }}
+                  repository: Exlint/dashboard
+                  event-type: docs-production
