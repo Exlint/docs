@@ -4,7 +4,6 @@
 	"description": "Exlint Docs",
 	"private": true,
 	"scripts": {
-		"preinstall": "npx only-allow pnpm",
 		"husky:install": "husky install",
 		"git:config": "git config --local include.path ../.gitconfig",
 		"setdev": "run-p husky:install git:config",

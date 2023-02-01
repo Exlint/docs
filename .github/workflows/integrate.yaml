@@ -19,10 +19,10 @@ jobs:
                   node-version: 16
 
             - name: Installing dependencies
-              run: pnpm install
+              run: npm install
 
             - name: Check unused dependencies
-              run: pnpm depcheck
+              run: npm depcheck
 
             - name: Check Files and Directories Linter
-              run: pnpm inflint
+              run: npm inflint
