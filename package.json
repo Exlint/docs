@@ -1,6 +1,7 @@
 {
-	"name": "exlint-docs",
+	"name": "@exlint.io/docs",
 	"version": "0.0.0",
+	"description": "Exlint Docs",
 	"private": true,
 	"scripts": {
 		"preinstall": "npx only-allow pnpm",
