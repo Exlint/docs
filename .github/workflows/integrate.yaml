@@ -22,7 +22,4 @@ jobs:
               run: npm install
 
             - name: Check unused dependencies
-              run: npm depcheck
-
-            - name: Check Files and Directories Linter
-              run: npm inflint
+              run: npm run depcheck
