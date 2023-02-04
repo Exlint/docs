@@ -8,7 +8,7 @@ jobs:
     depcheck:
         name: Testing Depcheck
 
-        runs-on: [self-hosted, Linux, X64, integration]
+        runs-on: ubuntu-latest
         steps:
             - name: Setup Node environment
               uses: Exlint/node-environment@v1.2.4
