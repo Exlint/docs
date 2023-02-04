@@ -9,7 +9,6 @@ permissions:
 
 jobs:
     depcheck:
-        needs: call_pnpm_caching_workflow
         name: Testing Depcheck
 
         runs-on: ubuntu-latest
@@ -25,7 +24,6 @@ jobs:
               run: pnpm depcheck
 
     inflint:
-        needs: call_pnpm_caching_workflow
         name: Testing Inflint
 
         runs-on: ubuntu-latest
@@ -41,7 +39,6 @@ jobs:
               run: pnpm inflint
 
     prettier:
-        needs: call_pnpm_caching_workflow
         name: Testing Prettier
 
         runs-on: ubuntu-latest
@@ -57,7 +54,6 @@ jobs:
               run: pnpm prettier
 
     test_build:
-        needs: call_pnpm_caching_workflow
         name: Testing build
 
         runs-on: ubuntu-latest
