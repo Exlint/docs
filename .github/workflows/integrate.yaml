@@ -10,16 +10,28 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout
-              uses: actions/checkout@v3
-
-            - name: Setup Node.js
-              uses: actions/setup-node@v3
+            - name: Setup Node environment
+              uses: Exlint/node-environment@v1.2.4
               with:
-                  node-version: 16
+                node-version: 18.13.0
+                package-manager: pnpm
+                package-manager-version: 7.26.3
 
-            - name: Installing dependencies
-              run: npm install
+              - name: Installing dependencies
+              run: pnpm install
+    depcheck:
+        - name: Check unused dependencies
+          runs-on: ubuntu-latest
+          
+      steps:
+      - name: Setup Node environment
+        uses: Exlint/node-environment@v1.2.4
+        with:
+          node-version: 18.13.0
+          package-manager: pnpm
+          package-manager-version: 7.26.3
 
-            - name: Check unused dependencies
-              run: npm run depcheck
+        - name: Test Depcheck
+        run: pnpm depcheck
+
+  
