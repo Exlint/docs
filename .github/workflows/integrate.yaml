@@ -21,4 +21,4 @@ jobs:
                   package-manager-version: 7.26.3
 
             - name: Test Depcheck
-              run: pnpm depcheck:all
+              run: pnpm depcheck
