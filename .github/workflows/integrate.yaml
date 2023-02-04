@@ -1,10 +1,18 @@
-name: Integration
+ame: Integration
 
 on:
     pull_request:
         branches: [main]
 
 jobs:
+    call_pnpm_caching_workflow:
+        name: Set pnpm caching
+        uses: ./.github/workflows/pnpm-caching.yaml
+        with:
+            runner: ubuntu-latest
+            node-version: 18
+            pnpm-version: 7.26.3
+
     test_depcheck:
         needs: call_pnpm_caching_workflow
         name: Testing Depcheck
