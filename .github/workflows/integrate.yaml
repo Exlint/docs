@@ -4,21 +4,27 @@ on:
     pull_request:
         branches: [main]
 
-permissions:
-    contents: read
-
 jobs:
-    depcheck:
-        name: Testing Depcheck
-
+    test_pull_request:
+        name: Testing & Checking the code
         runs-on: ubuntu-latest
+
         steps:
-            - name: Setup Node environment
+            - name: Checkout
+              uses: Exlint/node-environment@v1.2.4
+
+            - name: Setup Node.js
               uses: Exlint/node-environment@v1.2.4
               with:
                   node-version: 18.13.0
                   package-manager: pnpm
                   package-manager-version: 7.26.3
 
-            - name: Test Depcheck
+            - name: Installing dependencies
+              run: pnpm install
+
+            - name: Check unused dependencies
               run: pnpm depcheck
+
+            - name: Check Files and Directories Linter
+              run: pnpm inflint
