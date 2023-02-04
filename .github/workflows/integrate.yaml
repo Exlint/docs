@@ -10,9 +10,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout
-              uses: Exlint/node-environment@v1.2.4
-
             - name: Setup Node.js
               uses: Exlint/node-environment@v1.2.4
               with:
