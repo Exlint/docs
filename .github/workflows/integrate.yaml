@@ -4,21 +4,7 @@ on:
     pull_request:
         branches: [main]
 
-jobs:
-    test_pull_request:
-        name: Testing & Checking the code
-        runs-on: ubuntu-latest
-
-        steps:
-            - name: Setup Node environment
-              uses: Exlint/node-environment@v1.2.4
-              with:
-                node-version: 18.13.0
-                package-manager: pnpm
-                package-manager-version: 7.26.3
-
-              - name: Installing dependencies
-              run: pnpm install
+jobs:             
     depcheck:
         - name: Check unused dependencies
           runs-on: ubuntu-latest
