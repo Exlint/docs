@@ -12,7 +12,8 @@
 		"prepare": "is-ci || run-s setdev onboarding",
 		"start": "docusaurus start",
 		"build": "docusaurus build",
-		"depcheck": "depcheck --config ./.depcheckrc.json"
+		"depcheck": "depcheck --config ./.depcheckrc.json",
+		"prettier": "prettier --check **/*.{ts,js,cjs,json,yaml}"
 	},
 	"dependencies": {
 		"@commitlint/cli": "^17.0.2",
