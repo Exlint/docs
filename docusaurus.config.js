@@ -23,7 +23,7 @@ const config = {
 					sidebarPath: require.resolve('./sidebars.js'),
 					breadcrumbs: true,
 					routeBasePath: '/',
-					editUrl: 'https://github.com/Exlint/docs',
+					editUrl: 'https://github.com/Exlint/docs/blob/main',
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
@@ -54,10 +54,6 @@ const config = {
 				],
 			},
 			footer: {
-				logo: {
-					alt: 'Exlint Logo',
-					src: 'images/icon.png',
-				},
 				style: 'dark',
 				links: [
 					{
@@ -86,7 +82,7 @@ const config = {
 							},
 							{
 								label: 'CI/CD Examples',
-								href: '/cicd-examples/github-action',
+								href: '/ci/github-action',
 							},
 							{
 								label: 'Supported Libraries',
