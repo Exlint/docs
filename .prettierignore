@@ -1,4 +1,4 @@
 node_modules
-dist
-coverage
-README.md
+.docusaurus
+build
+pnpm-lock.yaml
