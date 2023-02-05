@@ -13,10 +13,10 @@ This document will guide you through the process of creating and using a Policy 
 ## Policy in a nutshell
 
 1. In the [Exlint Dashboard](https://app.exlint.io), select the `Group` you want to add a new Policy to.
-2. When creating a new Policy, select the library you want to use for your Policy.
+2. When creating a new Policy, select the open-source library you want to use for your Policy.
 3. Apply the appropriate `configurations` for your Policy, following the library guidelines.
 4. If the library has `rules` that can be applied, configure them as needed.
-5. `Run` the Policy's Group to get results! ([Running a Group](/setup/groups#running-a-group))
+5. Run the Policy's Group to get results! ([Running a Group](/setup/groups#running-a-group))
 
 ## Configuring a Policy
 
@@ -36,13 +36,19 @@ For example, Prettier has no `Rules`, and all configuration is `Global`.
 
 When configuring a global configuration, you have two options:
 
-1. `Code-based configuration`: This option allows you to manually set the configurations in your codebase. You can set the configurations using the library's specific syntax and guidelines.
+1.  `Code-based configuration`: This option allows you to input configuration using code, like you would on your IDE.
+    You can set the configurations using the library's specific syntax and guidelines.
+
+        :::caution
+        When configuring using `Code-based`, policy `rules` must be included in the global configuration.
+        :::
+
+2.  `Selection (UI) based configuration`: This option allows you to set the configurations using a user interface.
+    These selections will be translated into code-based configurations that can be applied to your policy.
 
     :::caution
-    When configuring using `Code-based`, policy `rules` have to be included in the global configuration.
+    This feature is currently under maintanance and not available.
     :::
-
-2. `Selection (UI) based configuration`: This option allows you to set the configurations using a user interface, such as a dashboard. These selections will be translated into code-based configurations that can be applied to your policy.
 
 :::tip
 Both options will produce the same result, it's just a matter of preference and ease of use.
@@ -53,7 +59,7 @@ Both options will produce the same result, it's just a matter of preference and 
 The `File list` section allows you to specify which files the policy should run on.
 This is useful if you want to only apply the policy to specific files or directories in your codebase.
 
-To configure the File list, you can use `code-based` configuration.
+To configure the File list, you can only use a code-based configuration.
 This can be done by including the file paths in File list the configuration file.
 
 You can also use wildcards such as `/*` and `/*/*` to match multiple files or directories.
@@ -69,7 +75,7 @@ src/**/*.{js,jsx}
 The Ignore List is a list of files or directories that you do not want the Exlint Policy to run on.
 This can be useful if you have certain files or directories that are not relevant to the Policy, or if you have files or directories that are causing errors or false positives.
 
-To use the Ignore List, you can specify the files or directories you want to ignore in the Exlint Dashboard when creating or editing a Policy.
+Similarly to configuring the `File list`, you can specify the files or directories you want to ignore using a code-based configuration.
 
 Here are a few examples of how to use the Ignore List:
 
@@ -82,7 +88,7 @@ Be careful when using wildcards, as they can cause unexpected results if not use
 
 ### Rules
 
-The `Rules` section of an Exlint Policy allows you to customize how your code is linted and scanned for best practices.
+The `Rules` section of an Exlint Policy allows you to customize how your code is linted and scanned for best practices, using the specific open-source library guidelines.
 There are two ways to configure Rules in a Policy:
 
 -   `Code-based configuration`: you can configure Rules in the global `Policy configurations` section of your Policy.
@@ -96,3 +102,7 @@ There are two ways to configure Rules in a Policy:
 
     -   Quickly filter out rules and enable / disable using UI.
     -   Configure rules using the same `Seletcion-based` configuration format.
+
+    :::caution
+    This feature is currently under maintanance and not available.
+    :::
