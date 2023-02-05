@@ -12,8 +12,10 @@
 		"prepare": "is-ci || run-s setdev onboarding",
 		"start": "docusaurus start",
 		"build": "docusaurus build",
+		"serve": "docusaurus serve",
 		"depcheck": "depcheck --config ./.depcheckrc.json",
-		"prettier": "prettier --check **/*.{ts,js,cjs,json,yaml}"
+		"prettier": "prettier --check **/*.{ts,js,cjs,json,yaml}",
+		"inflint": "inflint -c ./inflint.config.ts"
 	},
 	"dependencies": {
 		"@commitlint/cli": "^17.0.2",

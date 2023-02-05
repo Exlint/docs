@@ -19,6 +19,7 @@ jobs:
                   node-version: 18.13.0
                   package-manager: pnpm
                   package-manager-version: 7.26.3
+                  should-cache: false
 
             - name: Test Depcheck
               run: pnpm depcheck
@@ -34,6 +35,7 @@ jobs:
                   node-version: 18.13.0
                   package-manager: pnpm
                   package-manager-version: 7.26.3
+                  should-cache: false
 
             - name: Test Inflint
               run: pnpm inflint
@@ -49,11 +51,12 @@ jobs:
                   node-version: 18.13.0
                   package-manager: pnpm
                   package-manager-version: 7.26.3
+                  should-cache: false
 
             - name: Test Prettier
               run: pnpm prettier
 
-    test_build:
+    build:
         name: Testing build
 
         runs-on: ubuntu-latest
@@ -64,6 +67,7 @@ jobs:
                   node-version: 18.13.0
                   package-manager: pnpm
                   package-manager-version: 7.26.3
+                  should-cache: false
 
             - name: Test build
               run: pnpm build
