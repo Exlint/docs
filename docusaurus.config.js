@@ -78,7 +78,7 @@ const config = {
 							},
 							{
 								label: 'Setup',
-								href: '/setup/groups',
+								href: '/setup/compliances',
 							},
 							{
 								label: 'CI/CD Examples',

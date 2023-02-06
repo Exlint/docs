@@ -35,10 +35,10 @@ Exlint does not require access to code, Git provider, or any other sensitive inf
 
 Get started by creating an account at [app.exlint.io](https://app.exlint.io).
 
-Create your first Exlint Group, where can organize and manage different policies, and then run them as a group.
+Create your first Exlint Compliance, where can organize and manage different policies, and then run them as a compliance.
 These policies are used to check your code for compliance with industry standards and best practices.
 
-Read more about configuring groups [here](setup/groups).
+Read more about configuring compliances [here](setup/compliances).
 
 ### 2. Install the Exlint CLI
 
@@ -63,14 +63,14 @@ Use the following command to authenticate with your Exlint account:
 
     exlint auth
 
-### 4. Run an Exlint Group scan on your repository
+### 4. Run an Exlint Compliance scan on your repository
 
-To use a group, copy its identifier and use it with the `use` command in the Exlint CLI.
+To use a compliance, copy its identifier and use it with the `use` command in the Exlint CLI.
 This will adjust your IDE and install necessary extensions and libraries.
 
-    exlint use <group_id>
+    exlint use <compliance_id>
 
-Run a group scan against your code using the `run` command:
+Run a compliance scan against your code using the `run` command:
 
     exlint run [options]
 
