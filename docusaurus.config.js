@@ -15,6 +15,8 @@ const config = {
 	organizationName: 'Exlint.io',
 	projectName: 'Exlint Docs',
 
+	plugins: [require.resolve('docusaurus-plugin-image-zoom')],
+
 	presets: [
 		[
 			'@docusaurus/preset-classic',
@@ -115,14 +117,12 @@ const config = {
 				container: 'div',
 			},
 			zoom: {
-				selector: '.markdown img',
-				config: {
-					// options you can specify via https://github.com/francoischalifour/medium-zoom#usage
-					background: {
-						light: 'rgb(255, 255, 255)',
-						dark: 'rgb(50, 50, 50)',
-					},
+				selector: '.markdown :not(em) > img',
+				background: {
+					light: 'rgb(255, 255, 255)',
+					dark: 'rgb(50, 50, 50)',
 				},
+				config: {},
 			},
 		}),
 };
