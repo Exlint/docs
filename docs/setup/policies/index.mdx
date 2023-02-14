@@ -10,6 +10,7 @@ import styles from './styles.module.css';
 A Policy is a way to apply a set of rules and configurations to your code using a specific library.
 This document will guide you through the process of creating and using a Policy in Exlint.
 
+<!---
 ## Policy in a nutshell
 
 1. In the [Exlint Dashboard](https://app.exlint.io), select the `Group` you want to add a new Policy to.
@@ -17,6 +18,7 @@ This document will guide you through the process of creating and using a Policy 
 3. Apply the appropriate `configurations` for your Policy, following the library guidelines.
 4. If the library has `rules` that can be applied, configure them as needed.
 5. Run the Policy's Group to get results! ([Running a Group](/setup/groups#running-a-group))
+-->
 
 ## Configuring a Policy
 
@@ -35,6 +37,9 @@ For example, Prettier has no `Rules`, and all configuration is `Global`.
 ### Global Policy configurations
 
 When configuring a global configuration, you have two options:
+:::tip
+Both options will produce the same result, it's just a matter of preference and ease of use.
+:::
 
 1.  `Code-based configuration`: This option allows you to input configuration using code, like you would on your IDE.
     You can set the configurations using the library's specific syntax and guidelines.
@@ -49,10 +54,6 @@ When configuring a global configuration, you have two options:
     :::caution
     This feature is currently under maintanance and not available.
     :::
-
-:::tip
-Both options will produce the same result, it's just a matter of preference and ease of use.
-:::
 
 ### File list
 
