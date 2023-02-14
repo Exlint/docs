@@ -13,7 +13,7 @@ import { useEffect, useRef } from 'react';
 # Getting Started
 
 Introducing Exlint - a powerful open-source tool for simplifying coding compliance management in your software projects.
-Say goodbye to the hassle of managing multiple repositories and enforce best practices with ease.
+Say goodbye to the hassle of managing standards in multiple repositories and enforce best practices with ease.
 
 With Exlint, you can easily run centralized coding compliance checks on any project, both locally and on CI, using simple commands.
 Get started now and streamline your compliance management process with Exlint.
@@ -29,18 +29,9 @@ Exlint does not require access to code, Git provider, or any other sensitive inf
 
 ---
 
-## Using Exlint
+## Quickstart
 
-### 1. Centralize your compliance in Exlint
-
-Get started by creating an account at [app.exlint.io](https://app.exlint.io).
-
-Create your first Exlint Group, where can organize and manage different policies, and then run them as a group.
-These policies are used to check your code for compliance with industry standards and best practices.
-
-Read more about configuring groups [here](setup/groups).
-
-### 2. Install the Exlint CLI
+### 1. Install the Exlint CLI
 
 To install the Exlint CLI with `npm`, run one of the following commands:
 
@@ -57,27 +48,50 @@ To install the Exlint CLI with `npm`, run one of the following commands:
   </TabItem>
 </Tabs>
 
-### 3. Connect your CLI to your Exlint Dashboard
+### 2. 🚀 Run your first compliance run
+
+Use the `go` command to quickly setup a recommended compliance and customize it in our Dashboard.
+
+```bash
+exlint go
+```
+
+Exlint will ask you for you project languages, and create a recommended compliance based on how we code at Exlint.
+
+:::tip
+Use the go command to easily get started enforcing best practices with Exlint.
+You can adjust and customize the compliance for your needs, or create a new one from scratch!
+:::
+
+## Using Exlint
+
+### 1. Connect your CLI to your Exlint Dashboard
 
 Use the following command to authenticate with your Exlint account:
 
-    exlint auth
+```bash
+exlint auth
+```
 
-### 4. Run an Exlint Group scan on your repository
+### 2. Run an Exlint Group scan on your repository
 
 To use a group, copy its identifier and use it with the `use` command in the Exlint CLI.
 This will adjust your IDE and install necessary extensions and libraries.
 
-    exlint use <group_id>
+```bash
+exlint use <group_id>
+```
 
 Run a group scan against your code using the `run` command:
 
-    exlint run [options]
+```bash
+exlint run [options]
+```
 
 You can also run the command with `--fix` or `-f` option.
 Providing this option will make Exlint try to automatically fix code issues.
 
-### 5. Integrate Exlint into your CI
+### 3. Integrate Exlint into your CI
 
 Keep your CI aligned with your stardartized Exlint compliance using our [GitHub Action](/ci/github-action).
 Check out our [roadmap](https://github.com/orgs/Exlint/projects/3) to see which other integrations we're planning to support (or tell us if we're missing the one you like!)
