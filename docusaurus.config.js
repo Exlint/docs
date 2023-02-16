@@ -19,6 +19,10 @@ const config = {
 		[
 			'@docusaurus/preset-classic',
 			{
+				gtag: {
+					trackingID: 'G-GW6NMY47QH',
+					anonymizeIP: true,
+				},
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
 					breadcrumbs: true,
