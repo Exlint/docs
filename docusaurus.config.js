@@ -19,6 +19,12 @@ const config = {
 		[
 			'@docusaurus/preset-classic',
 			{
+				sitemap: {
+					changefreq: 'weekly',
+					priority: 0.5,
+					ignorePatterns: ['/tags/**'],
+					filename: 'sitemap.xml',
+				},
 				gtag: {
 					trackingID: 'G-GW6NMY47QH',
 					anonymizeIP: true,
