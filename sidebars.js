@@ -59,8 +59,8 @@ const sidebars = {
 		},
 		{
 			type: 'link',
-			label: 'Discord Community',
-			href: 'https://discord.gg/sqtbwvgzek',
+			label: 'Slack Community',
+			href: 'https://join.slack.com/t/exlint-io/shared_invite/zt-1ombwjchz-iKziYNc~eZuNUy2gH68N1w',
 		},
 	],
 };

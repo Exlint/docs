@@ -70,8 +70,8 @@ const config = {
 								href: 'https://github.com/Exlint',
 							},
 							{
-								label: 'Discord',
-								href: 'https://discord.gg/sqtbwvgzek',
+								label: 'Slack',
+								href: 'https://join.slack.com/t/exlint-io/shared_invite/zt-1ombwjchz-iKziYNc~eZuNUy2gH68N1w',
 							},
 						],
 					},
@@ -87,7 +87,7 @@ const config = {
 								href: '/setup/compliances',
 							},
 							{
-								label: 'CI/CD Examples',
+								label: 'CI',
 								href: '/ci/github-action',
 							},
 							{
