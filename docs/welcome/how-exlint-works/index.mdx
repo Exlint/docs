@@ -12,12 +12,12 @@ import styles from './styles.module.css';
 # How Exlint works
 
 Exlint is an open-source tool that helps in maintaining code quality and compliance by centralizing and streamlining coding standards.
-It works by running a set of open-source linters as a group on your codebase, and identifying any issues or violations of the specified rules.
+It works by running a set of open-source linters as a compliance on your codebase, and identifying any issues or violations of the specified rules.
 
 When you run Exlint, it will automatically adjust your IDE and install any necessary extensions and libraries.
 This allows you to see the results of the linter checks directly in your code editor, including live-linting.
 
-Exlint also provides a web-based dashboard app that allows you to view and manage your Exlint Groups, including adding and removing policies, and managing their configurations and rules.
+Exlint also provides a web-based dashboard app that allows you to view and manage your Exlint Compliances, including adding and removing policies, and managing their configurations and rules.
 With Exlint, you can easily centralize your compliance efforts and maintain a stardartized code quality across projects.
 
 ## What does Exlint analyze?
@@ -32,7 +32,7 @@ The types of issues that Exlint can analyze include:
 -   Performance issues
 -   Unused or deprecated code
 
-The policies which you are using in an Exlint Group will specify what type of analysis it can perform and what type of error it can detect.
+The policies which you are using in an Exlint Compliance will specify what type of analysis it can perform and what type of error it can detect.
 
 :::info
 Since Exlint is in beta, we only support a limited number of policies ([supported libraries](/supported-libraries)), but we're incrementally adding support for more policies and languages.
@@ -40,7 +40,7 @@ Since Exlint is in beta, we only support a limited number of policies ([supporte
 
 ## Where does the analysis occur?
 
-Exlint's group run process is entirely local using our open-source CLI.
+Exlint's compliance run process is entirely local using our open-source CLI.
 Your files and their contents are not sent to our backend, as the CLI performs the run on your machine.
 Only metadata is sent to our backend, which will be used to display your run history on your dashboard.
 
