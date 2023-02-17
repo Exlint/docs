@@ -1,7 +1,7 @@
 /*
  * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
+ - create an ordered compliance of docs
+ - render a sidebar for each doc of that compliance
  - provide next/previous navigation
 
  The sidebars can be generated from the filesystem, or explicitly defined here.
@@ -28,7 +28,7 @@ const sidebars = {
 			label: 'Setup',
 			collapsed: true,
 			items: [
-				'setup/groups/index',
+				'setup/compliances/index',
 				'setup/policies/index',
 				'setup/cli-argument/index',
 				'setup/cli-output/index',
