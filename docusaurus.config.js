@@ -53,6 +53,12 @@ const config = {
 						position: 'right',
 						label: 'Sign up | Login',
 					},
+					{
+						'href': 'https://github.com/Exlint/cli',
+						'position': 'right',
+						'className': 'header-github-link',
+						'aria-label': 'GitHub repository',
+					},
 				],
 			},
 			footer: {
@@ -80,7 +86,7 @@ const config = {
 							},
 							{
 								label: 'Setup',
-								href: '/setup/groups',
+								href: '/setup/compliances',
 							},
 							{
 								label: 'CI',

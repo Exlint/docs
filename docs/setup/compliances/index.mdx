@@ -1,0 +1,48 @@
+---
+sidebar_position: 1
+slug: /setup/compliances
+title: Compliances
+description: Exlint is a CLI tool that provides developers a quick and efficient application of multiple coding rule policies in multiple projects
+---
+
+import styles from './styles.module.css';
+
+Exlint Compliances allows you to manage and enforce coding standards across multiple projects and teams.
+
+## What is an Exlint Compliance?
+
+A Compliance is a set of configurable open-source policie that can be run together on any project in a matter of seconds.
+
+## Creating a Compliance
+
+To create a compliance, you'll need to visit the Compliance Management page on the Exlint Dashboard. Here, you can create a new compliance which is assigned with a unique identifier.
+Once you've created a compliance, you can configure its open-source policies to suit your needs.
+
+Read more about configuring policies in the [policies section](/setup/policies).
+
+## Running a Compliance
+
+To use an Exlint Compliance in your project, you'll first need to configure an account on the Exlint Dashboard.
+
+Once your account is set up, use `exlint auth` to authenticate your user with Exlint.
+
+```bash
+exlint auth
+```
+
+Now you can use the compliance in your project by running `exlint use <compliance_id>` in the terminal from your project's root folder.
+Exlint will configure your project with the required libraries and plugins for easy development. You can also see your linters in action if the linter support live linting.
+
+```bash
+exlint use <compliance_id>
+```
+
+:::tip
+You can easily switch compliance in your project by running the `exlint use <compliance_id>` command again!
+:::
+
+To run the compliance policies over your project, you can use the command `exlint run`. Exlint will automatically use the configured compliance and output the policies' results.
+
+    exlint run [options]
+
+You can also run the command with `--fix` or `-f` option. Providinig this option will make Exlint try to automatically fix your code issues.

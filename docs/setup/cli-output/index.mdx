@@ -9,26 +9,25 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import styles from './styles.module.css';
 
-Exlint's `run` command allows you to execute the linting and scanning of your code using the policies in a specific group.
-The output of the command will display the results of each policy in the group, similar to running the linter or formatter for each library separately.
+Exlint's `run` command allows you to execute the linting and scanning of your code using the policies in a specific compliance.
+The output of the command will display the results of each policy in the compliance, similar to running the linter or formatter for each library separately.
 
 #### Examples
 
-For example, when using the run command with a Group that includes the `Prettier` and `ESLint` policies, the output will show the results for each policy in the group.
+For example, when using the run command with a Compliance that includes the `Prettier` and `ESLint` policies, the output will show the results for each policy in the compliance.
 Here is an example of what the output may look like:
 
-```bash title="Exlint File list"
---- Prettier output ---
+```bash title="Terminal"
+──────────────────────────── Prettier output ────────────────────────────
 
 Checking formatting...
-[warn] .vscode/settings.json
 [warn] index.js
-[warn] Code style issues found in 2 files. Forgot to run Prettier?
+[warn] Code style issues found in 1 files. Forgot to run Prettier?
 
 
---- ESLint output ---
+──────────────────────────── ESLint output ────────────────────────────
 
-/Users/talrofe/Desktop/Exlint/index.js
+/Users/exlint/Dashboard/index.js
 4:1  error  File has too many lines (4). Maximum allowed is 3  max-lines
 
 ✖ 1 problem (1 error, 0 warnings)
