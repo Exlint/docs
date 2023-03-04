@@ -9,6 +9,8 @@
 		"prettier",
 		"@mdx-js/react",
 		"@docusaurus/plugin-content-docs",
-		"@docusaurus/preset-classic"
+		"@docusaurus/preset-classic",
+		"@docusaurus/plugin-google-gtag",
+		"@docusaurus/plugin-sitemap"
 	]
 }

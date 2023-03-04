@@ -21,6 +21,15 @@ const config = {
 		[
 			'@docusaurus/preset-classic',
 			{
+				sitemap: {
+					changefreq: 'weekly',
+					priority: 0.5,
+					filename: 'sitemap.xml',
+				},
+				gtag: {
+					trackingID: 'G-GW6NMY47QH',
+					anonymizeIP: true,
+				},
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
 					breadcrumbs: true,
