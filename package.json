@@ -19,9 +19,9 @@
 	},
 	"dependencies": {
 		"@commitlint/cli": "^17.0.2",
-		"@docusaurus/core": "2.0.0-beta.21",
-		"@docusaurus/plugin-google-gtag": "2.3.1",
-		"@docusaurus/plugin-sitemap": "2.3.1",
+		"@docusaurus/core": "2.4.3",
+		"@docusaurus/plugin-google-gtag": "2.4.3",
+		"@docusaurus/plugin-sitemap": "2.4.3",
 		"@mdx-js/react": "1.6.22",
 		"commitizen": "^4.2.4",
 		"cz-vinyl": "^1.3.2",
@@ -31,8 +31,8 @@
 		"react-dom": "^17.0.2"
 	},
 	"devDependencies": {
-		"@docusaurus/plugin-content-docs": "2.0.0-beta.21",
-		"@docusaurus/preset-classic": "2.0.0-beta.21",
+		"@docusaurus/plugin-content-docs": "2.4.3",
+		"@docusaurus/preset-classic": "2.4.3",
 		"@exlint.io/inflint": "^1.2.7",
 		"chalk": "4.1.2",
 		"depcheck": "1.4.3",
