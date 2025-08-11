@@ -13,7 +13,7 @@ specifiers:
   commitizen: ^4.2.4
   cz-vinyl: ^1.3.2
   depcheck: 1.4.3
-  docusaurus-plugin-image-zoom: 0.1.1
+  docusaurus-plugin-image-zoom: 0.1.4
   figlet: ^1.5.2
   husky: 8.0.1
   is-ci: ^3.0.1
@@ -32,7 +32,7 @@ dependencies:
   '@mdx-js/react': 1.6.22_react@17.0.2
   commitizen: 4.3.0
   cz-vinyl: 1.6.2
-  docusaurus-plugin-image-zoom: 0.1.1
+  docusaurus-plugin-image-zoom: 0.1.4
   prism-react-renderer: 1.3.5_react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -4719,8 +4719,8 @@ packages:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.4
 
-  /docusaurus-plugin-image-zoom/0.1.1:
-    resolution: {integrity: sha512-cJXo5TKh9OR1gE4B5iS5ovLWYYDFwatqRm00iXFPOaShZG99l5tgkDKgbQPAwSL9wg4I+wz3aMwkOtDhMIpKDQ==}
+  /docusaurus-plugin-image-zoom/0.1.4:
+    resolution: {integrity: sha512-Fc16FUUVKgvF0OuMapsau0GFopSAH99t+FCRtTpF8n2Wt8toi5Et3xHKPNvuCb85PTtDuNfFUp5m9eCij0dXlw==}
     dependencies:
       medium-zoom: 1.0.8
     dev: false
