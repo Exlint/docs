@@ -33,7 +33,7 @@
 	"devDependencies": {
 		"@docusaurus/plugin-content-docs": "2.0.0-beta.21",
 		"@docusaurus/preset-classic": "2.0.0-beta.21",
-		"@exlint.io/inflint": "^1.2.7",
+		"@exlint.io/inflint": "^2.0.0",
 		"chalk": "4.1.2",
 		"depcheck": "1.4.3",
 		"figlet": "^1.5.2",
